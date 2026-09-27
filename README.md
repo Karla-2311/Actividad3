@@ -8,7 +8,7 @@ Componente de JavaScript puro (sin frameworks) que genera una **barra de progres
 
 **¿Qué problema resuelve?** Muchas interfaces necesitan mostrarle al usuario el avance de algo — una descarga, el uso de almacenamiento, el progreso hacia una meta — y un número solo ("46%") no comunica tan rápido como una barra visual que se llena frente a tus ojos. Este componente genera esa barra de forma dinámica y reutilizable, sin tener que escribir el HTML/CSS de cada barra a mano cada vez que se necesita una nueva.
 
-## Instalación
+# Instalación
 
 Copia las carpetas `css/` y `js/` a tu proyecto e impórtalas en tu HTML:
 
@@ -17,7 +17,7 @@ Copia las carpetas `css/` y `js/` a tu proyecto e impórtalas en tu HTML:
 <script src="js/componente.js"></script>
 ```
 
-## Uso
+# Uso
 
 Crea un contenedor vacío en tu HTML con un `id`:
 
@@ -47,14 +47,30 @@ actualizarBarraProgreso('miBarra', 90); // se anima desde su valor actual hasta 
 ```html
 <button onclick="actualizarBarraProgreso('miBarra', 90)">Actualizar progreso</button>
 ```
+### Caso de uso: descarga en progreso
 
-## Reutilización
+Esta barra simula el progreso de una descarga de archivo. Cada clic en el
+botón representa un nuevo reporte de avance (como el que un navegador real
+recibiría del servidor), y la barra se actualiza sin recrearse:
+
+```javascript
+let progresoDescarga = 0;
+function simularDescarga() {
+  progresoDescarga = Math.min(progresoDescarga + 20, 100);
+  actualizarBarraProgreso('barraDescarga', progresoDescarga);
+}
+```
+
+# Reutilización
 
 En `index.html` se usan **tres instancias** del mismo componente con distinto contenido y comportamiento: una barra de almacenamiento en naranja con valor fijo, una barra de meta de ventas en verde con valor fijo, y una barra de descarga en azul que arranca en 0% y se va actualizando en vivo cada vez que el usuario da clic en el botón — todo sin duplicar HTML, CSS o JS.
 
-## Capturas de pantalla
+# Capturas de pantalla
 ### Interfaz del componente en acción
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9a471244-ab9f-48f4-b9d3-d4fcf3a8a37a" />
 
-## Video demo
+### Descarga en progreso
+<img width="730" height="255" alt="image" src="https://github.com/user-attachments/assets/5fa7ff03-bf48-4849-af17-7417f301e9c7" />
+
+# Video
 
