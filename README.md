@@ -6,7 +6,7 @@
 
 Componente de JavaScript puro (sin frameworks) que genera una **barra de progreso animada**: se rellena desde 0 hasta el porcentaje indicado con una animación suave, y puede actualizarse en cualquier momento a un nuevo valor.
 
-¿Qué problema resuelve? Muchas interfaces necesitan mostrarle al usuario el avance de algo — una descarga, el uso de almacenamiento, el progreso hacia una meta — y un número solo ("46%") no comunica tan rápido como una barra visual que se llena frente a tus ojos. Este componente genera esa barra de forma dinámica y reutilizable, sin tener que escribir el HTML/CSS de cada barra a mano cada vez que se necesita una nueva.
+**¿Qué problema resuelve?** Muchas interfaces necesitan mostrarle al usuario el avance de algo — una descarga, el uso de almacenamiento, el progreso hacia una meta — y un número solo ("46%") no comunica tan rápido como una barra visual que se llena frente a tus ojos. Este componente genera esa barra de forma dinámica y reutilizable, sin tener que escribir el HTML/CSS de cada barra a mano cada vez que se necesita una nueva.
 
 ## Instalación
 
