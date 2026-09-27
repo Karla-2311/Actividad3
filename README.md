@@ -1,3 +1,7 @@
+# ACTIVIDAD 3
+- Programación Web
+- Antonio Vázquez Karla Guadalupe
+
 # Barra de progreso animada — Componente visual reutilizable
 
 Componente de JavaScript puro (sin frameworks) que genera una **barra de progreso animada**: se rellena desde 0 hasta el porcentaje indicado con una animación suave, y puede actualizarse en cualquier momento a un nuevo valor.
