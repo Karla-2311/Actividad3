@@ -1,0 +1,132 @@
+/*
+1. VARIABLES CSS (custom properties)
+-proposito: centralizar colores del componente.
+*/
+:root{
+    --color-fondo: #EEF3F2;
+    --color-texto: #1C2B33;
+    --color-texto-suave: #6C757D;
+    --color-track: #E1E8E6;
+
+    --color-azul: #3B7EA1;
+    --color-verde: #2f9e63;
+    --color-naranja: #e08a2e;
+    --color-rojo: #c1443c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.pagina{
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color-azul);
+    margin-bottom: 8px;
+}
+
+.subtitulo{
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+h2{
+    font-size: 15px;
+    color: var(--color-texto);
+    margin: 28px 0 4px;
+}
+
+button.demo{
+    margin-top: 20px;
+    background: var(--color-azul);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*
+2. BARRA DE PROGRESO — contenedor general
+-margin-bottom: separa cada barra de la siguiente
+*/
+.barra-progreso{
+    margin-bottom: 22px;
+}
+
+/*
+3. HEADER — etiqueta + porcentaje
+-flexbox: coloca la etiqueta a la izquierda y el valor a la derecha
+*/
+.barra-progreso-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.barra-progreso-etiqueta{
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.barra-progreso-valor{
+    color: var(--color-texto-suave);
+    font-variant-numeric: tabular-nums; /*evita que el ancho salte al cambiar el numero*/
+}
+
+/*
+4. TRACK — el fondo/riel de la barra
+-border-radius: extremos redondeados tipo pastilla
+-overflow hidden: evita que el relleno se salga de las esquinas redondeadas
+*/
+.barra-progreso-track{
+    width: 100%;
+    height: 10px;
+    background: var(--color-track);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+/*
+5. FILL — el relleno que avanza
+-width controlado por JS: se anima con requestAnimationFrame
+-transition adicional: suaviza cualquier cambio brusco de color/tamaño
+*/
+.barra-progreso-fill{
+    height: 100%;
+    border-radius: 999px;
+    transition: background 0.3s;
+}
+
+.barra-progreso-azul{
+    background: var(--color-azul);
+}
+
+.barra-progreso-verde{
+    background: var(--color-verde);
+}
+
+.barra-progreso-naranja{
+    background: var(--color-naranja);
+}
+
+.barra-progreso-rojo{
+    background: var(--color-rojo);
+}

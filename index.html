@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra de progreso - Componente reutilizable</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="pagina">
+  <h1>Componente: Barra de progreso</h1>
+  <p class="subtitulo">Barras que se animan de 0 hasta su valor, generadas dinámicamente en JS.</p>
+
+  <h2>Uso de almacenamiento</h2>
+  <div id="barraAlmacenamiento"></div>
+
+  <h2>Meta de ventas del mes</h2>
+  <div id="barraVentas"></div>
+
+  <h2>Descarga en curso (se actualiza al hacer clic)</h2>
+  <div id="barraDescarga"></div>
+  <button class="demo" onclick="simularDescarga()">Simular avance de descarga</button>
+</div>
+
+<script src="js/barra.js"></script>
+<script>
+  // --- Instancia 1: valor fijo, color naranja (advertencia, casi lleno) ---
+  crearBarraProgreso('barraAlmacenamiento', 82, { etiqueta: 'Usados 82 GB de 100 GB', color: 'naranja' });
+
+  // --- Instancia 2: valor fijo, color verde ---
+  crearBarraProgreso('barraVentas', 46, { etiqueta: 'Meta mensual', color: 'verde' });
+
+  // --- Instancia 3: empieza en 0 y se actualiza dinámicamente con un botón ---
+  crearBarraProgreso('barraDescarga', 0, { etiqueta: 'archivo.zip', color: 'azul' });
+
+  let progresoDescarga = 0;
+  function simularDescarga() {
+    progresoDescarga = Math.min(progresoDescarga + 20, 100);
+    actualizarBarraProgreso('barraDescarga', progresoDescarga);
+  }
+</script>
+
+</body>
+</html>
