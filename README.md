@@ -73,4 +73,5 @@ En `index.html` se usan **tres instancias** del mismo componente con distinto co
 <img width="730" height="255" alt="image" src="https://github.com/user-attachments/assets/5fa7ff03-bf48-4849-af17-7417f301e9c7" />
 
 # Video
+https://youtu.be/nT9tfbBSOFE?si=3GHrfHRhmWi9sgq1
 
