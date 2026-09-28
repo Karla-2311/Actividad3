@@ -7,15 +7,8 @@
 // Guarda referencia de cada barra creada para poder actualizarla después.
 const _barras = {};
 
-/**
+/*
  * Crea una barra de progreso animada dentro del contenedor indicado.
- *
- * @param {string} idContenedor - id del <div> donde se va a insertar la barra
- * @param {number} porcentaje - valor inicial de 0 a 100
- * @param {Object} [opciones]
- * @param {string} [opciones.etiqueta=''] - texto descriptivo a la izquierda (ej. "Descarga")
- * @param {string} [opciones.color='azul'] - 'azul' | 'verde' | 'naranja' | 'rojo'
- * @param {number} [opciones.duracion=1000] - duración de la animación en milisegundos
  */
 function crearBarraProgreso(idContenedor, porcentaje, opciones = {}) {
   const contenedor = document.getElementById(idContenedor);
@@ -65,10 +58,6 @@ function crearBarraProgreso(idContenedor, porcentaje, opciones = {}) {
  * Actualiza una barra de progreso ya creada a un nuevo porcentaje,
  * animando desde su valor actual. Útil para reflejar progreso en vivo
  * (ej. una descarga, un formulario que se va completando, etc.)
- *
- * @param {string} idContenedor
- * @param {number} nuevoPorcentaje - valor de 0 a 100
- * @param {number} [duracion=800]
  */
 function actualizarBarraProgreso(idContenedor, nuevoPorcentaje, duracion = 800) {
   if (!_barras[idContenedor]) return;
